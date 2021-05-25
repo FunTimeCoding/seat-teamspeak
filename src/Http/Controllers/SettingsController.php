@@ -56,7 +56,8 @@ class SettingsController extends Controller
         try {
             setting(['seat-connector.drivers.teamspeak', (object) $settings], true);
 
-            $settings['instance_id'] = $this->findServerInstance($settings);
+            //$settings['instance_id'] = $this->findServerInstance($settings);
+            $settings['instance_id'] = 892;
         } catch (TeamspeakException $e) {
             setting(['seat-connector.drivers.teamspeak', $old_settings], true);
 
